@@ -1,0 +1,56 @@
+extends indexUsuario
+block content
+  div.card-panel.indigo.lighten-5.z-depth-5
+    form.col.s12
+      h5.center Revisor para titulación Integral
+      div.row
+        div.input-field.col.s12
+          label(for="txtTipoPrograma") Fecha
+      div.row
+        div.input-field.col.l6.s12
+          i.material-icons.prefix today
+          input.datepicker(type="date")
+        div.input-field.col.l6.s12
+          i.material-icons.prefix reorder
+          input.validate(type="text",maxlength="10")
+          label(for="txtFolio") Folio
+        div.input-field.col.s12
+          i.material-icons.prefix contacts
+          input.validate(type="text")
+          label(for="txtDetinario") Jefe del departamento
+        div.input-field.col.s12
+          label(for="txtTipoPrograma") Fecha límite
+      div.row
+        div.input-field.col.l4.s12
+          i.material-icons.prefix today
+          input.datepicker(type="date")
+
+        div.input-field.col.l8.s12
+          i.material-icons.prefix person
+          input.validate#txtNombre(type="text")
+          label(for="txtNombre") Nombre del residente:
+        div.input-field.col.l4.s12
+          i.material-icons.prefix local_library
+          input.validate#txtCarrera(type="text")
+          label(for="txtCarrera") Carrera
+        div.input-field.col.l8.s12
+          i.material-icons.prefix folder_shared
+          input.validate(type="text")
+          label(for="txtCalificacion") Nombre del proyecto
+      div.row.hide-on-med-and-down
+        div.input-field.right-align.col.l12
+          button.btn.waves-effect.green.darken-4(type="submit" name="action") Cancelar
+            i.material-icons.right reply
+          button.btn.waves-effect.green.darken-3(type="submit" name="action") Generar PDF
+            i.material-icons.right note_add
+      div.row.hide-on-large-only
+        div.input-field.right-align.fixed-action-btn.horizontal
+          a.btn-floating.btn-large.green.darken-1
+            i.large.material-icons done_all
+          ul
+            li
+              a.btn-floating.deep-orange.lighten-1yellow.darken-1
+                i.material-icons reply
+            li
+              a.btn-floating.orange.darken-1
+                i.material-icons note_add
